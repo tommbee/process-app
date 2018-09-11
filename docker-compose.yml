@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: test-api
+    ports:
+      - '8001:8001'
+    volumes:
+      - .:/home/docker/www
+    env_file: .env-dev
